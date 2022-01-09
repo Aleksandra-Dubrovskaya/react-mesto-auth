@@ -1,0 +1,7 @@
+.popup__container_type_login-message {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

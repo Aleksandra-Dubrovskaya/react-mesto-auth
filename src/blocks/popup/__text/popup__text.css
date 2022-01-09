@@ -1,0 +1,33 @@
+.popup__text {
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: inherit;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  padding: 0 0 13px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.popup__text:focus {
+  outline: none;
+}
+
+.popup__text::-webkit-input-placeholder {
+  font-family: inherit;
+}
+
+.popup__text::-moz-placeholder {
+  font-family: inherit;
+}
+
+.popup__text::-ms-input-placeholder {
+  font-family: inherit;
+}
+
+.popup__text::placeholder {
+  font-family: inherit;
+}
+
