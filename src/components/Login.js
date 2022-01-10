@@ -22,8 +22,8 @@ function Login(props) {
     <section className="register">
       <h1 className="register__title">{props.title}</h1>
       <form className="register__form" onSubmit={handleSubmit}>
-        <input type="email" placeholder="Email" className="register__input"onChange={handleEmailInput} />
-        <input type="password" placeholder="Пароль" className="register__input" onChange={handlePasswordInput} />
+        <input type="email" placeholder="Email" className="register__input" value={email || ''} onChange={handleEmailInput} />
+        <input type="password" placeholder="Пароль" className="register__input" value={password || ''} onChange={handlePasswordInput} />
         <button type="submit" className="register__submit-button">{props.buttonText}</button>
       </form>
     </section>

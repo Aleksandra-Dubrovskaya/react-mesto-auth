@@ -76,6 +76,18 @@ function App() {
   }, [])
 
   React.useEffect(() => {
+    function closeByEscape(event) {
+      if (event.key === 'Escape') {
+        closeAllPopups()
+      }
+    }
+
+    document.addEventListener('keydown', closeByEscape)
+
+    return () => document.removeEventListener('keydown', closeByEscape)
+  }, [])
+
+  React.useEffect(() => {
     const jwt = localStorage.getItem("jwt")
     if (jwt) {
       auth.checkToken(jwt)
@@ -90,6 +102,12 @@ function App() {
         })
     }
   }, [])
+
+  React.useEffect(() => {
+    if (isLoggedIn === true) {
+      navigate("/")
+    }
+  }, [isLoggedIn, navigate])
 
   function handleCardLike(card) {
     // Снова проверяем, есть ли уже лайк на этой карточке
